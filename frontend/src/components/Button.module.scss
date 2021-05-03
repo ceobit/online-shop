@@ -1,0 +1,26 @@
+@import 'src/scss/abstracts/_abstracts-dir';
+@import 'src/scss/base/_base-dir';
+
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  background: $yellow;
+  color: $white;
+  text-align: center;
+  transition: all 0.2s;
+
+  font-family: 'SF', serif;
+  font-size: 1.05rem;
+  font-weight: bold;
+  line-height: 1.37rem;
+
+  &_sm {
+    padding: .8em 4.5em;
+  }
+
+  &_lg {
+    padding: 1.3em 6.8em;
+  }
+}
