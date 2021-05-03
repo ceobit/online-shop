@@ -3,6 +3,7 @@
 
 .button {
   display: inline-block;
+  width: 100%;
   border: none;
   border-radius: 8px;
   text-decoration: none;
@@ -17,7 +18,7 @@
   line-height: 1.37rem;
 
   &_sm {
-    padding: .8em 4.5em;
+    padding: 0.8em 4.5em;
   }
 
   &_lg {
