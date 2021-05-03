@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import classes from './Button.module.scss';
+import styles from './button.module.scss';
 
 interface IButtonProps {
   title: string;
@@ -9,7 +9,7 @@ interface IButtonProps {
 }
 
 const Button = ({ title, size }: IButtonProps) => {
-  const btnClass = classNames(classes.button, `classes.button_${size}`);
+  const btnClass = classNames(styles.button, styles[`button_${size}`]);
 
   return <button className={btnClass}>{title}</button>;
 };
