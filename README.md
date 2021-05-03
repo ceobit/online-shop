@@ -3,8 +3,8 @@
 <h2>Full-Stack application</h2>
 <h4> the application under construction<h4>
 
-###Status:
-working on get started page. The mobile-first layout.
+### Status:
+working on start page. The mobile-first layout.
 
 a temporary address https://romantic-bhaskara-14a353.netlify.app/
 
