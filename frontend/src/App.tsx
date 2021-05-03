@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import Button from './components/Button';
+import Start from './pages/Start/Start';
 
 function App() {
   return (
     <div className="App">
-      <Button title="Get started" size="lg" />
+      <Start />
     </div>
   );
 }
