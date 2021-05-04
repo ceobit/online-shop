@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import started_gif from '../../images/started.gif';
 import styles from './start.module.scss';
 import Button from '../../components/Button/Button';
+import Text from '../../components/Text/Text';
 
 const Start = () => {
   const pageStyle = classNames(styles.started);
@@ -13,10 +14,13 @@ const Start = () => {
       <div className={pageStyle}>
         <img className={styles.started_gif} src={started_gif} alt="slides" />
         <div className={styles.started_gif_cover} />
-        <div className={styles.started_shape} />
+        {/*<div className={styles.started_shape} />*/}
       </div>
       <div className={styles.started_bg}>
-        <Button title="Get started" size="sm" />
+        <Text color="white">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </Text>
+        <Button title="Get started" />
       </div>
     </>
   );
