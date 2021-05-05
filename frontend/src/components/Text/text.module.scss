@@ -1,0 +1,30 @@
+@import '../../scss/abstracts/_abstracts-dir';
+
+.text {
+  font-family: 'SF', serif;
+  font-weight: normal;
+
+  &_lg {
+    font-size: size(19);
+  }
+
+  &_md {
+    font-size: size(17);
+  }
+
+  &_sm {
+    font-size: size(14);
+  }
+
+  &_dark {
+    color: $dark;
+  }
+
+  &_grey {
+    color: $grey;
+  }
+
+  &_white {
+    color: $white;
+  }
+}

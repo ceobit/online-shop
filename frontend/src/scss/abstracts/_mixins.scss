@@ -23,3 +23,8 @@
   align-items: $alignItem;
   flex-direction: $flexDirection;
 }
+
+//Function to convert px value into rem
+@function size($target, $context: $defaultFontSize) {
+  @return ($target / $context) * 1em;
+}
