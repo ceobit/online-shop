@@ -1,4 +1,10 @@
-const countries = [
+interface ICountries {
+    flag: string;
+    name: string;
+    code: string;
+}
+
+const countries: ICountries[] = [
   {
     flag: '🇺🇸',
     name: 'USA',
