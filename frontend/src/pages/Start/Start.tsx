@@ -15,7 +15,6 @@ const Start = () => {
       <div className={pageStyle}>
         <img className={started_gif} src={started_picture} alt="slides" />
         <div className={started_gif_cover} />
-        {/*<div className={styles.started_shape} />*/}
       </div>
       <div className={started_bg}>
         <img className={started_logo} src={logo} alt="logo" />
