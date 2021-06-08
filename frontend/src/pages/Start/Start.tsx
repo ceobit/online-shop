@@ -15,13 +15,13 @@ const Start = () => {
       <div className={pageStyle}>
         <img className={started_gif} src={started_picture} alt="slides" />
         <div className={started_gif_cover} />
-      </div>
-      <div className={started_bg}>
-        <img className={started_logo} src={logo} alt="logo" />
-        <Text color="white">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry
-        </Text>
-        <Button title="Get started" />
+        <div className={started_bg}>
+          <img className={started_logo} src={logo} alt="logo" />
+          <Text color="white">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+          </Text>
+          <Button title="Get started" />
+        </div>
       </div>
     </>
   );

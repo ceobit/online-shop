@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Field, Form, Formik, FormikHelpers } from 'formik';
 import countries from '../../services/countries';
 import classNames from 'classnames';
@@ -11,6 +11,12 @@ interface IPhoneInputProps {
 }
 
 const PhoneInput = () => {
+  const [code, setCode] = useState<string>('');
+
+  const changeCode = (e: React.FormEvent<HTMLInputElement>) => {
+    setCode(e.currentTarget.value);
+  };
+
   return (
     <Formik
       initialValues={{
@@ -25,12 +31,16 @@ const PhoneInput = () => {
       }}
     >
       <Form>
-        <Field name="color" as="select">
+        <Field name="setCode" as="select" onChange={changeCode}>
           {countries.map((country) => (
-            <option value={country.name} key={country.code}>{`${country.code} ${country.flag}`}</option>
+            <option
+              value={country.name}
+              key={country.code}
+            >{`${country.flag} ${country.name}`}</option>
           ))}
         </Field>
-
+        <label htmlFor="code" />
+        <Field name="code" value={code} />
         <label htmlFor="number" />
         <Field name="number" placeholder="number" />
         <button type="submit">Submit</button>

@@ -8,6 +8,9 @@ interface IButtonProps {
   size?: 'lg' | 'md' | 'sm';
 }
 
+/** new comment for JSDoc**/
+
+
 const Button = ({ title, size }: IButtonProps) => {
   size = size || 'sm';
   const btnClass = classNames(styles.button, styles[`button_${size}`]);
