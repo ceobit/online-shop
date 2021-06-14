@@ -6,13 +6,20 @@ import styles from './button.module.scss';
 interface IButtonProps {
   title: string;
   size?: 'lg' | 'md' | 'sm';
+  handleButton: () => void;
 }
 
-const Button = ({ title, size }: IButtonProps) => {
+/** new comment for JSDoc**/
+
+const Button = ({ title, size, handleButton }: IButtonProps) => {
   size = size || 'sm';
   const btnClass = classNames(styles.button, styles[`button_${size}`]);
 
-  return <button className={btnClass}>{title}</button>;
+  return (
+    <button className={btnClass} onClick={handleButton}>
+      {title}
+    </button>
+  );
 };
 
 export default Button;
