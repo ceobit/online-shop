@@ -10,9 +10,8 @@ interface IPhoneInputProps {
   number: string;
 }
 
-const findValueIntoObject = (value: string): any => {
-  const code = countries.filter((el) => el.name === value);
-  console.log(code);
+const findCodeIntoObject = (value: string): string => {
+  const {code} = countries.filter((el) => el.name === value)[0];
   return code;
 };
 
@@ -20,7 +19,7 @@ const PhoneInput = () => {
   const [code, setCode] = useState<string>('');
 
   const changeCode = (e: React.FormEvent<HTMLInputElement>) => {
-    setCode(findValueIntoObject(e.currentTarget.value));
+    setCode(findCodeIntoObject(e.currentTarget.value));
   };
 
   return (
