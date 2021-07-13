@@ -10,12 +10,17 @@ interface IPhoneInputProps {
   number: string;
 }
 
+const findValueIntoObject = (value: string): any => {
+  const code = countries.filter((el) => el.name === value);
+  console.log(code);
+  return code;
+};
+
 const PhoneInput = () => {
   const [code, setCode] = useState<string>('');
 
   const changeCode = (e: React.FormEvent<HTMLInputElement>) => {
-    console.log(e.currentTarget.value);
-    setCode(e.currentTarget.value);
+    setCode(findValueIntoObject(e.currentTarget.value));
   };
 
   return (
