@@ -10,16 +10,25 @@ interface IPhoneInputProps {
   number: string;
 }
 
+// find country code with country name
 const findCodeIntoObject = (value: string): string => {
-  const {code} = countries.filter((el) => el.name === value)[0];
+  const { code } = countries.filter((el) => el.name === value)[0];
   return code;
 };
 
 const PhoneInput = () => {
   const [code, setCode] = useState<string>('');
+  const [phoneNumber, setPhoneNumber] = useState<string>('');
 
+  // get country code
   const changeCode = (e: React.FormEvent<HTMLInputElement>) => {
-    setCode(findCodeIntoObject(e.currentTarget.value));
+    const { value } = e.currentTarget;
+    setCode(findCodeIntoObject(value));
+  };
+
+  const handlePhoneNumber = (e: React.FormEvent<HTMLInputElement>) => {
+    const { value } = e.currentTarget;
+    setPhoneNumber(code + value);
   };
 
   return (
@@ -44,10 +53,8 @@ const PhoneInput = () => {
             >{`${country.flag} ${country.name}`}</option>
           ))}
         </Field>
-        <label htmlFor="code" />
-        <Field name="code" value={code} />
-        <label htmlFor="number" />
-        <Field name="number" placeholder="number" />
+        <label htmlFor="phoneNumber" />
+        <Field name="phoneNumber" value={code} onChange={handlePhoneNumber} />
         <button type="submit">Submit</button>
       </Form>
     </Formik>
