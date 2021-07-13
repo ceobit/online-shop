@@ -14,6 +14,7 @@ const PhoneInput = () => {
   const [code, setCode] = useState<string>('');
 
   const changeCode = (e: React.FormEvent<HTMLInputElement>) => {
+    console.log(e.currentTarget.value);
     setCode(e.currentTarget.value);
   };
 
