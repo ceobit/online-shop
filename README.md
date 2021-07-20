@@ -4,9 +4,7 @@
 <h4> the application under construction<h4>
 
 ### Status:
-working on start page. The mobile-first layout.
-
-a temporary address https://romantic-bhaskara-14a353.netlify.app/
+working on auth page. The mobile-first layout.
 
 Used Technology:
 <ul>
